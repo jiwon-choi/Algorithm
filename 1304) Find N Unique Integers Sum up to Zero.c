@@ -1,8 +1,6 @@
 /**
- * Note: The returned array must be malloced, assume caller calls free().
+ * https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/
  */
-
-// https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/
 
 int* sumZero(int n, int* returnSize){
     int* arr = (int*)malloc(sizeof(int)*n);
