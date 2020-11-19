@@ -4,7 +4,8 @@
 
 #include <stdio.h>
 
-main(){
+main()
+{
     printf("\\    /\\\n");
     printf(" )  ( \')\n");
     printf("(  /  )\n");

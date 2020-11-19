@@ -2,13 +2,14 @@
  # https://programmers.co.kr/learn/courses/30/lessons/64065
 '''
 
+
 def solution(s):
     answer = []
-    
+
     _s = s[2:-1]
     split_list = _s.split(',{')
     s_list = []
-    
+
     for i in range(len(split_list)):
         s_list.append([])
         num_string = ""
@@ -26,5 +27,5 @@ def solution(s):
         if i < len(s_list):
             for j in range(i+1, len(s_list)):
                 s_list[j].remove(s_list[i][0])
-    
+
     return answer

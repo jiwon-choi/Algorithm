@@ -2,9 +2,10 @@
  # https://programmers.co.kr/learn/courses/30/lessons/49993
 '''
 
+
 def solution(skill, skill_trees):
     answer = 0
-    
+
     new_list = []
     for tree in skill_trees:
         new_str = []

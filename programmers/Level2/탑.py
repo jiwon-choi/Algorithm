@@ -2,6 +2,7 @@
  # https://programmers.co.kr/learn/courses/30/lessons/42588
 '''
 
+
 def solution(heights):
     answer = []
     for i in reversed(range(len(heights))):

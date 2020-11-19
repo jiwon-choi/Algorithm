@@ -5,11 +5,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(){
+int main()
+{
   int caseNumber;
   scanf("%d", &caseNumber);
 
-  for (int i = 0; i < caseNumber; i++){
+  for (int i = 0; i < caseNumber; i++)
+  {
     int n;
     scanf("%d", &n);
 
