@@ -17,7 +17,7 @@ def solution(number, k):
                 cnt += 1
             answer.append(nu)
     if (cnt != k):
-        for i in range(k):
+        for _ in range(k):
             answer.pop()
     answer = ''.join(answer)
     return answer
