@@ -18,10 +18,10 @@ def solution(numbers, hand):
         elif num in [3, 6, 9]:
             answer.append('R')
         else:
-            left = abs(now_left[0]-position[num][0]) + \
-                abs(now_left[1]-position[num][1])
-            right = abs(now_right[0]-position[num][0]) + \
-                abs(now_right[1]-position[num][1])
+            left = abs(now_left[0] - position[num][0]) + \
+                abs(now_left[1] - position[num][1])
+            right = abs(now_right[0] - position[num][0]) + \
+                abs(now_right[1] - position[num][1])
             if left == right:
                 answer.append(hand[0].upper())
             else:
