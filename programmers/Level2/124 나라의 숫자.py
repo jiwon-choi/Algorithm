@@ -5,11 +5,10 @@
 
 def solution(n):
     answer = []
-    while(n != 0):
-        modulo = n % 3
-        n //= 3
-        if(modulo != 0):
-            answer.append(str(modulo))
+    while n != 0:
+        n, mod = divmod(n, 3)
+        if mod != 0:
+            answer.append(str(mod))
         else:
             answer.append('4')
             n -= 1
