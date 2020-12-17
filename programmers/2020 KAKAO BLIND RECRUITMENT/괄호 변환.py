@@ -3,7 +3,7 @@
 '''
 
 
-def check(u):
+def check(u):  # 올바른 괄호 문자열인지 판단
     check = 0
     for ch in u:
         if ch == '(':
@@ -16,13 +16,13 @@ def check(u):
 
 
 def solution(p):
-    if p == '':
+    if p == '':  # 빈 문자열 반환
         return ''
     left = 0
     right = 0
     u = ''
     v = ''
-    for ch in p:
+    for ch in p:  # u와 v로 분리
         if left > 0 and right > 0 and left == right:
             v += p[left + right:]
             break
@@ -32,7 +32,7 @@ def solution(p):
             right += 1
         u += ch
 
-    if check(u) is True:
+    if check(u) is True:  # u가 올바른 괄호 문자열인 경우
         return u + solution(v)
     else:
         answer = '(' + solution(v) + ')'
