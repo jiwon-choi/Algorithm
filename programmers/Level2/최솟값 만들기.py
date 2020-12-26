@@ -10,3 +10,7 @@ def solution(A, B):
     while (A):
         answer += A.pop() * B.pop()
     return answer
+
+
+def solution2(A, B):
+    return sum(a * b for a, b in zip(sorted(A), sorted(B, reverse=True)))
