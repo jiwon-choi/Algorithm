@@ -24,5 +24,4 @@ def solution(msg):
             answer.append(dic.index(tmp[:-1]))
         dic.append(tmp)
         del mlist[:end]
-
     return answer
