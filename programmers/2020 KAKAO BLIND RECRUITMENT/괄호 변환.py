@@ -3,42 +3,44 @@
 '''
 
 
-def check(u):  # 올바른 괄호 문자열인지 판단
-    check = 0
-    for ch in u:
-        if ch == '(':
-            check += 1
+def correct(u):
+    cnt = 0
+    for i in u:
+        if i == '(':
+            cnt += 1
         else:
-            check -= 1
-        if check < 0:
+            cnt -= 1
+        if cnt < 0:
             return False
     return True
 
 
-def solution(p):
-    if p == '':  # 빈 문자열 반환
-        return ''
-    left = 0
-    right = 0
-    u = ''
-    v = ''
-    for ch in p:  # u와 v로 분리
-        if left > 0 and right > 0 and left == right:
-            v += p[left + right:]
-            break
-        elif ch == '(':
-            left += 1
+def balanced(w):
+    L, R = 0, 0
+    for i in w:
+        if i == '(':
+            L += 1
         else:
-            right += 1
-        u += ch
+            R += 1
+        if L == R:
+            break
+    return L + R
 
-    if check(u) is True:  # u가 올바른 괄호 문자열인 경우
+
+def solution(p):
+    if p == '':
+        return ''
+
+    split_point = balanced(p)
+    u, v = p[:split_point], p[split_point:]
+
+    if correct(u):
         return u + solution(v)
     else:
-        answer = '(' + solution(v) + ')'
+        new = '(' + solution(v) + ')'
         for ch in u[1:-1]:
             if ch == '(':
-                answer += ')'
+                new += ')'
             else:
-                answer += '('
-        return answer
+                new += '('
+        return new
