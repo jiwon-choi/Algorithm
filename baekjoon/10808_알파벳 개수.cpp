@@ -2,8 +2,7 @@
  * https://www.acmicpc.net/problem/10808
  */
 
-#include <iostream>
-#include <string>
+#include "bits/stdc++.h"
 
 int main(void) {
     std::string input;
