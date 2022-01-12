@@ -4,7 +4,7 @@
 
 #include "bits/stdc++.h"
 
-int main(void) {
+void solution1(void) {
     int n, total;
     std::cin >> n;
     int input[n + 1];
@@ -24,5 +24,31 @@ int main(void) {
             cnt++;
     }
     std::cout << cnt << std::endl;
+}
+
+
+void solution2(void) {
+    using namespace std;
+
+    int n, total;
+    cin >> n;
+    vector<int> input(n);
+    for (int i = 0; i < n; i++)
+        cin >> input[i];
+    cin >> total;
+
+    sort(input.begin(), input.end());
+
+    int cnt = 0;
+    for (int i = 0; i < n; i++) {
+        if (binary_search(input.begin() + i + 1, input.end(), total - input[i]))
+            cnt++;
+    }
+    cout << cnt;
+}
+
+int main(void) {
+    // solution1();
+    // solution2();
     return (0);
 }
