@@ -18,3 +18,13 @@ def solution(progresses, speeds):
             answer.append(cnt)
 
     return answer
+
+def solution(progresses, speeds):
+    answer = []
+    day = 0
+    for i, p in enumerate(progresses):
+        while p + speeds[i] * day < 100:
+            day += 1
+            answer.append(0)
+        answer[-1] += 1
+    return [n for n in answer if not n == 0]
